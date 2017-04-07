@@ -7,4 +7,6 @@ apt-get install -q -y \
 apt-get clean  && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+WORKDIR /opt/
+
 RUN pip install -r https://github.com/openstack/fuel-plugin-contrail/blob/master/plugin_test/vapor/requirements.txt
