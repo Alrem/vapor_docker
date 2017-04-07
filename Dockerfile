@@ -10,3 +10,7 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 WORKDIR /opt/
 
 RUN pip install -r https://raw.githubusercontent.com/openstack/fuel-plugin-contrail/master/plugin_test/vapor/requirements.txt
+
+COPY entrypoint.sh /opt/
+
+ENTRYPOINT ["/opt/entrypoint.sh"]
