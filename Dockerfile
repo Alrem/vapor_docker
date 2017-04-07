@@ -9,4 +9,4 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 WORKDIR /opt/
 
-RUN pip install -r https://github.com/openstack/fuel-plugin-contrail/blob/master/plugin_test/vapor/requirements.txt
+RUN pip install -r https://raw.githubusercontent.com/openstack/fuel-plugin-contrail/master/plugin_test/vapor/requirements.txt
