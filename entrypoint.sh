@@ -27,6 +27,7 @@ test -a vapor/exports.sh || download_vapor
 
 cd vapor
 . exports.sh 
+chmod 600 $OS_FAULTS_CLOUD_DRIVER_KEYFILE
 pip install -U -r requirements.txt
 DATE=`date +%Y%m%d%H%M`
 $CMD py.test -v --junit-xml=test_reports$DATE/report.xml --html=test_reports$DATE/report.html $@ -k "$K_PARAM"
